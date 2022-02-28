@@ -1,37 +1,41 @@
-document.querySelector('.alert-btn').addEventListener('click', function() {
-    alert("JavaScript is working");
-});
-
-document.querySelector('.get-btn').addEventListener('click', function() {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then(response => response.json())
-        .then((json) => {
-            console.log(json)
-            document.getElementById('result').textContent = 'API response: ' + JSON.stringify(json);
-        });
-});
-
 document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    var title = document.getElementById("input-title").value;
-    var body = document.getElementById("input-body").value;
-    var userID = document.getElementById("input-user-id").value;
+    var age = document.getElementById("input-age").value;
+    var weight = document.getElementById("input-weight").value;
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
+    if (!isInt(age)) {
+        displayError('Age must be a whole number')
+        return
+    }
+    if (isNaN(parseFloat(weight))) {
+        displayError('Weight must be a number')
+        return
+    }
+
+    fetch('https://onerepmaxcalculator.herokuapp.com/calculate', {
             method: 'POST',
             body: JSON.stringify({
-                title: title,
-                body: body,
-                userId: userID,
+                age: parseInt(age),
+                weight: parseFloat(weight),
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
+                'Origin': 'https://onerepmaxcalculator.github.io'
             },
         })
         .then((response) => response.json())
         .then((json) => {
             console.log(json)
-            document.getElementById('result').textContent = 'API response: ' + JSON.stringify(json);
+            document.getElementById('result').textContent = 'Calulated Max: ' + json['max'] + 'kg';
         });
 });
+
+function displayError(err) {
+    document.getElementById('result').textContent = 'Error: ' + err;
+}
+
+function isInt(value) {
+    var er = /^-?[0-9]+$/;
+    return er.test(value);
+}
