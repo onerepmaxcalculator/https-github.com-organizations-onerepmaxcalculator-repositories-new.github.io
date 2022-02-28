@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>1RM Calculator</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="author" content="Louis Heath">
+  	<meta name="description" content="1 (One) Rep Max Calculator">
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+        <div class="jumbotron">
+            <h1>One Rep Max Calculator</h1>
+
+            <p>The website currently uses the free test API at <a href="https://jsonplaceholder.typicode.com">https://jsonplaceholder.typicode.com</a></p>
+    
+            <button class="alert-btn">Test Alert</button>
+            <button class="get-btn">GET from API</button>
+    
+            <br><br>
+            <form id="form">
+                <label for="input-title">Title:</label>
+                <input type="text" id="input-title" name="input-title"><br>
+                <label for="input-body">Body:</label>
+                <input type="text" id="input-body" name="input-body"><br>
+                <label for="input-user-id">User ID:</label>
+                <input type="text" id="input-user-id" name="input-user-id"><br><br>
+
+                <button type="submit">POST to API</button>
+            </form>
+
+            <br>
+            <p id="result"></div>
+        </div>
+	</div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
