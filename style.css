@@ -4,5 +4,10 @@
 
 label {
     display: inline-block;
-    min-width: 70px;
+    min-width: 150px;
+}
+
+.label-optional {
+    color: grey;
+    font-size: 10px;
 }

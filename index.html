@@ -24,8 +24,24 @@
             <form id="form">
                 <label for="input-age">Age:</label>
                 <input type="text" id="input-age" name="input-age"><br>
-                <label for="input-weight">Weight:</label>
-                <input type="text" id="input-weight" name="input-weight"><br><br>
+
+                <label for="input-gender">Gender:</label>
+                <input type="text" id="input-gender" name="input-gender"><br>
+
+                <label for="input-height">
+                    Height (cm): <span class="label-optional">(Optional)</span>
+                </label>
+                <input type="text" id="input-height" name="input-height"><br>
+
+                <label for="input-weight">
+                    Weight (kg): <span class="label-optional">(Optional)</span>
+                </label>
+                <input type="text" id="input-weight" name="input-weight"><br>
+
+                <label for="input-lift">
+                    Lift: <span class="label-optional">(Optional)</span>
+                </label>
+                <input type="text" id="input-lift" name="input-lift"><br><br>
 
                 <button type="submit">Calculate</button>
             </form>
@@ -35,6 +51,7 @@
         </div>
 	</div>
 
-    <script src="calculator.js"></script>
+    <script src="scripts/input.js"></script>
+    <script src="scripts/calculator.js"></script>
 </body>
 </html>
