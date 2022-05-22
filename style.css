@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .container{
     padding-top: 10%;
 }
@@ -11,3 +15,39 @@ label {
     color: grey;
     font-size: 10px;
 }
+
+.in {
+    min-width: 200px;
+    min-height: 26px;
+
+}
+
+body {
+    background-image: url('tile.gif');
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    min-height: 100vh;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 500px
+    }
+}
+
+.banner-ad {
+    border-width: 0.5px;
+    border-style: dashed;
+    height: 50px;}

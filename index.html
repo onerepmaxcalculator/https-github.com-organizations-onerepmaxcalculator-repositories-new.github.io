@@ -17,41 +17,97 @@
 </head>
 <body>
 	<div class="container">
-        <div class="jumbotron">
             <h1>One Rep Max Calculator</h1>
-            <p>The API currently returns 100kg minus your age</p>
+            <p>The most comprehensive tool available to predict your potential</p><br>
 
             <form id="form">
                 <label for="input-age">Age:</label>
-                <input type="text" id="input-age" name="input-age"><br>
+                <input type="text" id="input-age" name="input-age" class="in"><br>
 
                 <label for="input-gender">Gender:</label>
-                <input type="text" id="input-gender" name="input-gender"><br>
+                <select class="form-select in" aria-label="Default select example" id="input-gender">
+                    <option selected></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Non-binary/Other</option>
+                </select><br>
 
                 <label for="input-height">
                     Height (cm): <span class="label-optional">(Optional)</span>
                 </label>
-                <input type="text" id="input-height" name="input-height"><br>
+                <input type="text" id="input-height" name="input-height" class="in"><br>
 
                 <label for="input-weight">
                     Weight (kg): <span class="label-optional">(Optional)</span>
                 </label>
-                <input type="text" id="input-weight" name="input-weight"><br>
+                <input type="text" id="input-weight" name="input-weight" class="in"><br>
 
                 <label for="input-lift">
                     Lift: <span class="label-optional">(Optional)</span>
                 </label>
-                <input type="text" id="input-lift" name="input-lift"><br><br>
+                <select class="form-select in" aria-label="Default select example" id="input-lift">
+                    <option selected value="Other">Other</option>
+                    <option value="Squat">Squat</option>
+                    <option value="Deadlift">Deadlift</option>
+                </select><br><br>
 
                 <button type="submit">Calculate</button>
-            </form>
+            </form><br>
+            
+            <div id="scroll-to"></div><br>
 
-            <br>
-            <p id="result"></div>
-        </div>
+            <div class="banner-ad">Banner ad</div><br>
+
+            <div id="results" class="hidden">
+                <strong><p id="result"></p></strong>
+
+                <p id="result-breakdown" >
+                    This calculation used algorithm X, considering Z and Y.
+                </p>
+    
+                <div id="all-algos">
+                    <h3>Algorithms</h3>
+                    <p>
+                        We consider every one-rep-max algorithm known to man, taking into consideration
+                        the parameters you provided to tailor your result.
+                    </p><br>
+
+                    <h5>Algo 1</h5>
+                    <p>
+                        This bad boy is made for Bench press. It was designed from a dataset
+                        of 20-30 year old males in one state in America.
+                    </p><br>
+                    <h5>Algo 2</h5>
+                    <p>
+                        Algorithm two sucks.
+                    </p><br>
+                    <h5>Algo 3</h5>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p><br>
+                    <h5>Algo 4</h5>
+                    <p>
+                        Scroll more.
+                    </p><br>
+                    <div class="banner-ad">Banner ad</div><br>
+                    <h5>Algo 5</h5>
+                    <p>
+                        This one was worth viewing an ad for.
+                    </p><br>
+                    <h5>Algo 6</h5>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    </p><br>
+                </div>
+            </div>
+
 	</div>
 
     <script src="scripts/input.js"></script>
     <script src="scripts/calculator.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

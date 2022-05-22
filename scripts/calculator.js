@@ -22,6 +22,9 @@ document.getElementById('form').addEventListener('submit', function(event) {
         .then((json) => {
             console.log(json)
             document.getElementById('result').textContent = 'Calculated Max: ' + json['max'] + 'kg';
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('scroll-to').scrollIntoView();
+
         });
 });
 

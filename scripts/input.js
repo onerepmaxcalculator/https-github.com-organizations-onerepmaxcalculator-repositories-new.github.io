@@ -46,7 +46,7 @@ function validateAge(a) {
 }
 
 function validateGender(g) {
-    if (g != 'Male' && g != 'Female' && g != 'Non-binary/Other') {
+    if (g != 'Male' && g != 'Female' && g != 'Other') {
         return `Gender must be Male, Female or Non-binary/Other`
     }
     return ''
