@@ -3,27 +3,27 @@ function readInputs() {
     age = read('age')
     err = validateAge(age)
     if (err != '') {
-        return null, err
+        return [null, err]
     }
     gender = read('gender')
     err = validateGender(gender)
     if (err != '') {
-        return null, err
+        return [null, err]
     }
     height = read('height')
     err = validateHeight(height)
     if (err != '') {
-        return null, err
+        return [null, err]
     }
     weight = read('weight')
     err = validateWeight(weight)
     if (err != '') {
-        return null, err
+        return [null, err]
     }
     lift = read('lift')
     err = validateLift(lift)
     if (err != '') {
-        return null, err
+        return [null, err]
     }
     return [{
         'age': age,
